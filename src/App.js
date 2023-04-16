@@ -1,40 +1,36 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import About from "./About"
-import Home from "./Home";
-import Contact from "./Contact";
-import Datatfatch from "./datatfatch";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Header from './Header'
+import './Style.css'
+import Login from "./Login";
+import Register from "./Register";
+import AddProduct from "./AddProduct";
+import UpdateProduct from "./UpdateProduct";
+
 
 
 
 function App() {
-
     return (
-        <div>
-         
-         <>
-         <h2>Hello</h2>
-        
-        
-              
-         <Routes>
-             
-            <Route path="home" element={<Home />}></Route>
-            <Route path="about" element={<About />}></Route>
-            <Route path="contact" element={<Contact />}></Route>
-            <Route path="" element={<Datatfatch />}></Route>
+        <div className="App">
 
-         </Routes>
-
-         
-         </>
+            <BrowserRouter>
+                <Header />
+                <Routes>
+                    <Route path="login" element={<Login />}></Route>
+                    <Route path="register" element={<Register />}></Route>
+                    <Route path="addproduct" element={<AddProduct />}></Route>
+                    <Route path="update" element={<UpdateProduct />}></Route>
+                </Routes>
 
 
-
-
+            </BrowserRouter>
         </div>
-    )
-    
+
+
+    );
 }
 
-export default App
+
+export default App;

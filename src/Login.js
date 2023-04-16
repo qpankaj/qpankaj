@@ -1,13 +1,13 @@
 import React from "react";
 
-function Home() {
+function Logic() {
 
     return(
         <div>
-              <h3>huyyuyftfjjjiojio</h3>
+            <h1>Logic</h1>
         </div>
     )
     
 }
 
-export default Home;
+export default Logic
